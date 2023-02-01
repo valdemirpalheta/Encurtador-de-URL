@@ -14,7 +14,7 @@ router.get('/:code', async (req, res, next) => {
   const code = req.params.code;
  
   const resultado = await Link.findOne({ where: { code } });
-  if (!resultado) return res.sendStatus(404);
+  if(!resultado) return res.sendStatus(404);
  
   resultado.hits++;
   await resultado.save();
