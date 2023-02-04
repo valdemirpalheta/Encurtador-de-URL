@@ -11,14 +11,19 @@
     <div class="container">
       <div class="header">
         <img src="/images/web.png" alt="Ecurtador" class="icon"/>
-        <h1>Ecurtador</h1>
+        <h1>Encurtador</h1>
         <p>Estatísticas de acesso</p>
+        <a href='<%= process.env.DOMAIN %><%= code %>/stats'  class="btn btn-primary">Atualizar Estatísticas</a>
       </div>
       <div class="stats">
+        <p>URL Encurtada:</p>
        <p>
-        <b>
+        <a 
+          href='<%= process.env.DOMAIN %><%= code %>'       
+          target="_blank"
+        >
           <%= process.env.DOMAIN %><%= code %>
-        </b>
+        </a>
        </p>
        <p>
         Redireciona para:<br />
